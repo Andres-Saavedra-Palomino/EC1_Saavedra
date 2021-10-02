@@ -1,0 +1,36 @@
+drop database if exists CyberCultura;
+create database CyberCultura DEFAULT CHARACTER SET utf8mb4 ;
+use CyberCultura;
+
+drop table if exists tb_autores;
+CREATE TABLE tb_autores (
+    id_aut INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nom_aut VARCHAR(250) NOT NULL,
+    eda_aut INT NOT NULL
+);
+
+drop table if exists tb_libros;
+CREATE TABLE tb_libros (
+    id_lib CHAR(5) NOT NULL PRIMARY KEY,
+    tit_lib VARCHAR(250) NOT NULL,
+    fcp_lib DATE NOT NULL,
+    edi_lib VARCHAR(250) NOT NULL,
+    gen_lib VARCHAR(250) NOT NULL,
+    id_aut INT NOT NULL REFERENCES tb_autores
+);
+
+insert tb_autores values
+(0,'Hajime Isayama',35),
+(0,'J. K. Rowling',56),
+(0,'Gaston Acurio',54);
+
+insert tb_libros values
+('eFr5T','ATTACK ON TITAN: NO REGRETS 1','2013-12-18','KODANSHA COMICS','Ciencia Ficción',1),
+('Hgb7q','HARRY POTTER Y EL MISTERIO DEL PRINCIPE','2005-07-16','SALAMANDRA BOLSILLO','Fantasía',2),
+('P3jf4','PERU. THE COOKBOOK','2015-05-18','PHAIDON','Culinario',3),
+('Xm5je','HARRY POTTER Y LA ORDEN DEL FENIX','2003-06-21','SALAMANDRA BOLSILLO','Fantasía',2);
+
+
+
+
+

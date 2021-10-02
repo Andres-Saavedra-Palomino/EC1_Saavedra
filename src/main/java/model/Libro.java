@@ -16,16 +16,16 @@ import lombok.NoArgsConstructor;
 @Data
 public class Libro {
 	@Id
-	@Column(name = "id_lib")
+	@Column(name = "id_lib",unique = true,nullable = false, length = 5)
 	private String codigo;
-	@Column(name = "tit_lib")
+	@Column(name = "tit_lib", length = 250, nullable = false)
 	private String titulo;
-	@Column(name = "fcp_lib")
-	private String fechaPublicacion;
-	@Column(name = "edi_lib")
+	@Column(name = "num_lib", nullable = false)
+	private int numero;
+	@Column(name = "edi_lib", length = 100, nullable = false)
 	private String editorial;
-	@Column(name = "gen_lib")
+	@Column(name = "gen_lib", length = 100, nullable = false)
 	private String genero;
-	@Column(name = "id_aut")
+	@Column(name = "id_aut", nullable = false)
 	private String idAutor;
 }

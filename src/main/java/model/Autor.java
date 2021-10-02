@@ -16,10 +16,10 @@ import lombok.NoArgsConstructor;
 @Data
 public class Autor {
 	@Id
-	@Column(name = "id_aut")
+	@Column(name = "id_aut", unique = true, nullable = false)
 	private String codigo;
-	@Column(name = "nom_aut")
+	@Column(name = "nom_aut", length = 100, nullable = false)
 	private String nombre;
-	@Column(name = "eda_aut")
+	@Column(name = "eda_aut", nullable = false)
 	private String edad;
 }

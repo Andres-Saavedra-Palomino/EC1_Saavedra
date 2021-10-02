@@ -5,7 +5,7 @@ use CyberCultura;
 drop table if exists tb_autores;
 CREATE TABLE tb_autores (
     id_aut INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nom_aut VARCHAR(250) NOT NULL,
+    nom_aut VARCHAR(100) NOT NULL,
     eda_aut INT NOT NULL
 );
 
@@ -13,9 +13,9 @@ drop table if exists tb_libros;
 CREATE TABLE tb_libros (
     id_lib CHAR(5) NOT NULL PRIMARY KEY,
     tit_lib VARCHAR(250) NOT NULL,
-    fcp_lib DATE NOT NULL,
-    edi_lib VARCHAR(250) NOT NULL,
-    gen_lib VARCHAR(250) NOT NULL,
+    num_lib INT NOT NULL,
+    edi_lib VARCHAR(100) NOT NULL,
+    gen_lib VARCHAR(100) NOT NULL,
     id_aut INT NOT NULL REFERENCES tb_autores
 );
 

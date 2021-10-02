@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 public class Autor {
 	@Id
 	@Column(name = "id_aut", unique = true, nullable = false)
-	private String codigo;
+	private int codigo;
 	@Column(name = "nom_aut", length = 100, nullable = false)
 	private String nombre;
 	@Column(name = "eda_aut", nullable = false)

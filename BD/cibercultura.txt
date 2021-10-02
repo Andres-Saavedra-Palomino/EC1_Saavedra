@@ -25,12 +25,12 @@ insert tb_autores values
 (0,'Gaston Acurio',54);
 
 insert tb_libros values
-('eFr5T','ATTACK ON TITAN: NO REGRETS 1','2013-12-18','KODANSHA COMICS','Ciencia Ficción',1),
-('Hgb7q','HARRY POTTER Y EL MISTERIO DEL PRINCIPE','2005-07-16','SALAMANDRA BOLSILLO','Fantasía',2),
-('P3jf4','PERU. THE COOKBOOK','2015-05-18','PHAIDON','Culinario',3),
-('Xm5je','HARRY POTTER Y LA ORDEN DEL FENIX','2003-06-21','SALAMANDRA BOLSILLO','Fantasía',2);
+('eFr5T','ATTACK ON TITAN: NO REGRETS 1',1,'KODANSHA COMICS','Ciencia FicciÃ³n',1),
+('Hgb7q','HARRY POTTER Y EL MISTERIO DEL PRINCIPE',5,'SALAMANDRA BOLSILLO','FantasÃ­a',2),
+('P3jf4','PERU. THE COOKBOOK',1,'PHAIDON','Culinario',3),
+('Xm5je','HARRY POTTER Y LA ORDEN DEL FENIX',3,'SALAMANDRA BOLSILLO','FantasÃ­a',2);
 
-
+select * from tb_libros;
 
 
 

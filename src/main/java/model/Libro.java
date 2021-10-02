@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class Libro {
 	@Id
-	@Column(name = "id_lib",unique = true,nullable = false, length = 5)
+	@Column(name = "id_lib", unique = true, nullable = false, length = 5)
 	private String codigo;
 	@Column(name = "tit_lib", length = 250, nullable = false)
 	private String titulo;
@@ -27,5 +27,5 @@ public class Libro {
 	@Column(name = "gen_lib", length = 100, nullable = false)
 	private String genero;
 	@Column(name = "id_aut", nullable = false)
-	private String idAutor;
+	private int idAutor;
 }
